@@ -4,6 +4,7 @@ hostname: k3os-top0
 # a public key if you intend to use ssh to connect to the node. This is highly recommended since k3OS has no root user.
 ssh_authorized_keys:
   - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCx6+rF18sMxCsOgc5zqaaDCsmj+VDJYEy3eoZtvj/qBhez/w8Lb+ZBcL5nq9KtHgJuP2+K2EkkPuvyhyWN/soyGGNnmfFhTTf7Rd5HffiIMwuZGAEnAAMd1FEAPIKjYWKacJ1Jp97XBRU77NzT9BgqFnqiYkf/y/PsURkJtohx5Dlffn9USn7GIN6ngm+D2aQu5P3i3Znd9i2BjXEEH+u6s+B1cvJNkZqK9Adv9leiiyfrRCdvU68RlTiguN7KZBv+9Z20oczUR9wYx4lXOxAHSe8M+zMBR1Z0C1w8o2OIXgvgKY2bCEhlxZYcQi3oiHx6QshqUWAqE7Oi/FJ1q+YAHvV/JPNuTJxs5fPXHO5t/ndUVWsrxC/1pgf3b6M3mxOI4D2cjN2CjOHikWUsESQK8+QFSf508bDCM5jbVpNpydU6elu+WWVP9mRP1bMkjSQ5OnyjNAb6tV+YPfTa7hm26rLUOQ+ac6Q++PSySKhP+ysl3UlP37ZepJ9UHjhT/90="
+
 # Ethernet config
 write_files:
   - path: /var/lib/connman/default.config
@@ -14,7 +15,10 @@ write_files:
       IPv6=off
       Nameservers=10.67.16.191
 
-k3OS:
+k3os:
+  modules:
+    - kvm
+    - nvme
   ntp_servers:
     - time1.google.com
     - time2.google.com
