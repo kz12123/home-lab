@@ -1,0 +1,32 @@
+# the hostname you want to use for the Pi
+hostname: k3os-top0 
+
+# a public key if you intend to use ssh to connect to the node. This is highly recommended since k3OS has no root user.
+ssh_authorized_keys:
+  - "ssh-rsa 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"
+
+# Ethernet config
+write_files:
+  - path: /var/lib/connman/default.config
+    content: |-
+      [service_eth0]
+      Type=ethernet
+      IPv4=10.67.16.54/255.255.255.0/10.67.16.1
+      IPv6=off
+      Nameservers=10.67.16.191
+
+k3OS:
+  ntp_servers:
+    - time1.google.com
+    - time2.google.com
+
+  dns_nameservers:
+    - 10.67.16.191
+    - 208.67.222.222
+    - 208.67.220.220
+
+  # We are going to disable servicelb and traefik and use some alternatives
+  k3s_args:
+    - server
+    - "--cluster-init"
+    - "--disable=traefik,servicelb"
